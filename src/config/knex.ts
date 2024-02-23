@@ -10,13 +10,13 @@ export const DATABASE_NAME = process.env.DB_NAME;
 const connectionString = `${DATABASE_DIALECT}://${DATABASE_USERNAME}:${DATABASE_PASSWORD}@127.0.0.1:${DATABASE_PORT}/${DATABASE_NAME}`;
 
 export const knexConfig: Knex.Config = {
-    client: 'pg',
-    connection: encodeURI(connectionString),
-    pool: {
-        min: 0,
-        max: 95,
-    },
-    migrations: {
-        tableName: 'knex_migrations',
-    },
+  client: 'pg',
+  connection: encodeURI(connectionString),
+  pool: {
+    min: 0,
+    max: 95,
+  },
+  migrations: {
+    tableName: 'knex_migrations',
+  },
 };
